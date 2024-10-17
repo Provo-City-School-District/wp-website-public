@@ -9,12 +9,14 @@ get_header();
 			<div class="grid3">
 				<?php
 				$children = get_categories(array('parent' => $cat_id));
-				foreach ($children as $child) {
-					$cat[] = $child->term_id;
-					$child_id = $child->term_id;
-					$subChildren = get_terms('category', "child_of=$child_id&fields=ids");
-					foreach ($subChildren as $subChild) {
-						array_push($cat, $subChild);
+				if (is_array($children)) {
+					foreach ($children as $child) {
+						$cat[] = $child->term_id;
+						$child_id = $child->term_id;
+						$subChildren = get_terms('category', "child_of=$child_id&fields=ids");
+						foreach ($subChildren as $subChild) {
+							array_push($cat, $subChild);
+						}
 					}
 				}
 				if (have_posts()) :
