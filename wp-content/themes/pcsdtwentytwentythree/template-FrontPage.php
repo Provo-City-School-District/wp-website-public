@@ -10,6 +10,7 @@ $get_to_know_fields = get_fields();
 <main id="mainContent" class="homeMainContent">
 
 	<?php
+	$posts_to_show = 3;
 	//query any alerts
 	$my_query = new WP_Query(array('showposts' => $posts_to_show, 'category_name'  => 'alert', 'post_status' => 'publish'));
 	?>
