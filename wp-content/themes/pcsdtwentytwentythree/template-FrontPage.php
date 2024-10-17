@@ -138,7 +138,7 @@ $get_to_know_fields = get_fields();
 			<div class="stories">
 				<?php
 				// excluding ID 1012. which is the Board Schedule.
-				$the_query = new WP_Query(array('posts_per_page' => 3, 'category__in' => array(1, 2), 'post_type'  => array('post', 'podcast')));
+				$the_query = new WP_Query(array('posts_per_page' => 3, 'category__in' => array(192, 1115), 'post_type'  => array('post', 'podcast')));
 				if ($the_query->have_posts()) :
 					while ($the_query->have_posts()) : $the_query->the_post(); ?>
 						<article>
