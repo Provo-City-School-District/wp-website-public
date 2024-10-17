@@ -56,6 +56,7 @@ get_header();
 				endif; // Close the if statement
 	?>
 	</div> <!-- Close the currentPage div -->
+	<?php get_sidebar('categories'); ?>
 </main> <!-- Close the main tag -->
 <?php
 get_footer();
