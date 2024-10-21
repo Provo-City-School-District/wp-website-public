@@ -51,52 +51,32 @@ get_header();
 					if ($breakdown['location'] == $location_of_fees_to_display['label']) {
 				?>
 						<section class="feeDisplay feeBreakdown">
-							<article class="fee">
-								<p>Descripción de tarifa</p>
-							</article>
-							<article class="fee">
-								<p>Tarifa</p>
-							</article>
-							<article class="fee">
-								<p>Fondo de recaudación</p>
-							</article>
-							<article class="fee">
-								<p>Total</p>
-							</article>
-							<article class="fee">
-								<p>Notas</p>
-							</article>
-							<!--
-										<article class="fee">
-											<p>Prior Year Approved Fee</p>
-										</article>
-									-->
-							<?php
-							foreach ($breakdown['breakdown_of_fees'] as $fee) {
-							?>
-								<article class="fee">
-									<span><?php echo $fee['fee_description']; ?></span>
-								</article>
-								<article class="fee textright">
-									<?php echo $fee['fee']; ?>
-								</article>
-								<article class="fee textright">
-									<?php echo $fee['fundraising']; ?>
-								</article>
-								<article class="fee textright">
-									<?php echo $fee['total']; ?>
-								</article>
-								<article class="fee textright">
-									<span><?php echo $fee['notes']; ?></span>
-								</article>
-								<!--
-										<article class="fee textright">
-											<span><?php echo $fee['prior_year_approved_fee']; ?></span>
-										</article>
-									-->
-							<?php
-							} //end foreach($breakdown['breakdown_of_fees']
-							?>
+							<table>
+								<thead>
+									<tr>
+										<th>Descripción de tarifa</th>
+										<th>Tarifa</th>
+										<th>Fondo de recaudación</th>
+										<th>Total</th>
+										<th>Notas</th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php
+									foreach ($breakdown['breakdown_of_fees'] as $fee) {
+									?>
+										<tr>
+											<th><?php echo $fee['fee_description']; ?></th>
+											<td class="textright"><?php echo $fee['fee']; ?></td>
+											<td class="textright"><?php echo $fee['fundraising']; ?></td>
+											<td class="textright"><?php echo $fee['total']; ?></td>
+											<td><?php echo $fee['notes']; ?></td>
+										</tr>
+									<?php
+									}
+									?>
+								</tbody>
+							</table>
 						</section>
 				<?php
 					} // end if($breakdown['location'] == 'location')
@@ -116,52 +96,32 @@ get_header();
 					if ($breakdown['location'] == $location_of_fees_to_display['label']) {
 				?>
 						<section class="feeDisplay feeBreakdown">
-							<article class="fee">
-								<p>Descripción de tarifa</p>
-							</article>
-							<article class="fee">
-								<p>Tarifa</p>
-							</article>
-							<article class="fee">
-								<p>Fondo de recaudación</p>
-							</article>
-							<article class="fee">
-								<p>Total</p>
-							</article>
-							<article class="fee">
-								<p>Notas</p>
-							</article>
-							<!--
-										<article class="fee">
-											<p>Prior Year Approved Fee</p>
-										</article>
-									-->
-							<?php
-							foreach ($breakdown['breakdown_of_fees'] as $fee) {
-							?>
-								<article class="fee">
-									<span><?php echo $fee['fee_description']; ?></span>
-								</article>
-								<article class="fee textright">
-									<?php echo $fee['fee']; ?>
-								</article>
-								<article class="fee textright">
-									<?php echo $fee['fundraising']; ?>
-								</article>
-								<article class="fee textright">
-									<?php echo $fee['total']; ?>
-								</article>
-								<article class="fee textright">
-									<span><?php echo $fee['notes']; ?></span>
-								</article>
-								<!--
-										<article class="fee textright">
-											<span><?php echo $fee['prior_year_approved_fee']; ?></span>
-										</article>
-									-->
-							<?php
-							} //end foreach($breakdown['breakdown_of_fees']
-							?>
+							<table>
+								<thead>
+									<tr>
+										<th>Descripción de tarifa</th>
+										<th>Tarifa</th>
+										<th>Fondo de recaudación</th>
+										<th>Total</th>
+										<th>Notas</th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php
+									foreach ($breakdown['breakdown_of_fees'] as $fee) {
+									?>
+										<tr>
+											<th><?php echo $fee['fee_description']; ?></th>
+											<td class="textright"><?php echo $fee['fee']; ?></td>
+											<td class="textright"><?php echo $fee['fundraising']; ?></td>
+											<td class="textright"><?php echo $fee['total']; ?></td>
+											<td><?php echo $fee['notes']; ?></td>
+										</tr>
+									<?php
+									}
+									?>
+								</tbody>
+							</table>
 						</section>
 				<?php
 					} // end if($breakdown['location'] == 'location')
@@ -217,106 +177,82 @@ I changed the code so that the search would happen before the if statement and t
 					if ($breakdown['location'] == $location_of_fees_to_display['label']) {
 				?>
 						<section class="feeDisplay feeBreakdown">
-							<article class="fee">
-								<p>Descripción de tarifa</p>
-							</article>
-							<article class="fee">
-								<p>Tarifa</p>
-							</article>
-							<article class="fee">
-								<p>Fondo de recaudación</p>
-							</article>
-							<article class="fee">
-								<p>Total</p>
-							</article>
-							<article class="fee">
-								<p>Notas</p>
-							</article>
-							<!--
-										<article class="fee">
-											<p>Prior Year Approved Fee</p>
-										</article>
-									-->
-							<?php
-							foreach ($breakdown['breakdown_of_fees'] as $fee) {
-							?>
-								<article class="fee">
+							<table>
+								<thead>
+									<tr>
+										<th>Descripción de tarifa</th>
+										<th>Tarifa</th>
+										<th>Fondo de recaudación</th>
+										<th>Total</th>
+										<th>Notas</th>
+									</tr>
+								</thead>
+								<tbody>
 									<?php
-									if ($fee['bold_line'] !== false) {
-										echo '<strong>';
+									foreach ($breakdown['breakdown_of_fees'] as $fee) {
+									?>
+										<tr>
+											<th>
+												<?php
+												if ($fee['bold_line'] !== false) {
+													echo '<strong>';
+												}
+												echo $fee['fee_description'];
+												if ($fee['bold_line'] !== false) {
+													echo '</strong>';
+												}
+												?>
+											</th>
+											<td class="textright">
+												<?php
+												if ($fee['bold_line'] !== false) {
+													echo '<strong>';
+												}
+												echo $fee['fee'];
+												if ($fee['bold_line'] !== false) {
+													echo '</strong>';
+												}
+												?>
+											</td>
+											<td class="textright">
+												<?php
+												if ($fee['bold_line'] !== false) {
+													echo '<strong>';
+												}
+												echo $fee['fundraising'];
+												if ($fee['bold_line'] !== false) {
+													echo '</strong>';
+												}
+												?>
+											</td>
+											<td class="textright">
+												<?php
+												if ($fee['bold_line'] !== false) {
+													echo '<strong>';
+												}
+												echo $fee['total'];
+												if ($fee['bold_line'] !== false) {
+													echo '</strong>';
+												}
+												?>
+											</td>
+											<td>
+												<?php
+												if ($fee['bold_line'] !== false) {
+													echo '<strong>';
+												}
+												echo $fee['notes'];
+												if ($fee['bold_line'] !== false) {
+													echo '</strong>';
+												}
+												?>
+											</td>
+										</tr>
+									<?php
 									}
 									?>
-									<span><?php echo $fee['fee_description']; ?></span>
-									<?php
-									if ($fee['bold_line'] !== false) {
-										echo '</strong>';
-									}
-									?>
-								</article>
-								<article class="fee textright">
-									<?php
-									if ($fee['bold_line'] !== false) {
-										echo '<strong>';
-									}
-									echo $fee['fee'];
-									if ($fee['bold_line'] !== false) {
-										echo '</strong>';
-									}
-									?>
-								</article>
-								<article class="fee textright">
-									<?php
-									if ($fee['bold_line'] !== false) {
-										echo '<strong>';
-									}
-									echo $fee['fundraising'];
-									if ($fee['bold_line'] !== false) {
-										echo '</strong>';
-									}
-									?>
-								</article>
-								<article class="fee textright">
-									<?php
-									if ($fee['bold_line'] !== false) {
-										echo '<strong>';
-									}
-									echo $fee['total'];
-									if ($fee['bold_line'] !== false) {
-										echo '</strong>';
-									}
-									?>
-								</article>
-								<article class="fee textright">
-									<?php
-									if ($fee['bold_line'] !== false) {
-										echo '<strong>';
-									}
-									?>
-									<span><?php echo $fee['notes']; ?></span>
-									<?php
-									if ($fee['bold_line'] !== false) {
-										echo '</strong>';
-									}
-									?>
-								</article>
-								<!--
-										<article class="fee textright">
-											<?php
-											if ($fee['bold_line'] !== false) {
-												echo '<strong>';
-											}
-											?>
-											<span><?php echo $fee['prior_year_approved_fee']; ?></span>
-											<?php
-											if ($fee['bold_line'] !== false) {
-												echo '</strong>';
-											}
-											?>
-										</article>
-									-->
-							<?php
-							} //end foreach($breakdown['breakdown_of_fees']
-							?>
+								</tbody>
+							</table>
 						</section>
 			<?php
 					} // end if($breakdown['location'] == 'location')

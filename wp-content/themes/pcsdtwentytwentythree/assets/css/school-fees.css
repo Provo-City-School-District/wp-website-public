@@ -1,7 +1,7 @@
-.schoolFeesMenu .post {
+/* .schoolFeesMenu .post {
     text-align: center;
     font-size: 23px;
-}
+} */
 
 
 
@@ -9,7 +9,7 @@
 fees styles
 https://provo.edu/school-fees/
 ================================================================================================================*/
-.feeDisplay {
+/* .feeDisplay {
   display: flex;
   flex-wrap: wrap;
 }
@@ -45,11 +45,11 @@ https://provo.edu/school-fees/
 }
 
 .schoolFeesMenu .postgrid .post {
-  /* width: 27%; */
+
 }
 
 .schoolFeesMenu .postgrid .post a {
   text-align: center;
   display: block;
   font-size: 23px;
-}
+} */
