@@ -10,7 +10,19 @@ get_header();
 				<?php
 				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				// excluding ID 1012. which is the Board Schedule.
-				$the_query = new WP_Query(array('posts_per_page' => 24, 'category__in' => array(192, 1115), 'cat' => '-1012', 'post_type'  => array('post', 'podcast'), 'paged'  => $paged));
+				$args = array(
+					'post_type' => 'post',
+					'post_status' => 'publish',
+					'posts_per_page' => 10,
+					'post__not_in' => array(1012), // Exclude post ID 1012
+					'date_query' => array(
+						array(
+							'after' => 'September 1, 2024',
+							'inclusive' => true,
+						),
+					),
+				);
+				$the_query = new WP_Query($args);
 				if ($the_query->have_posts()) :
 					while ($the_query->have_posts()) : $the_query->the_post(); ?>
 						<article class="post">
