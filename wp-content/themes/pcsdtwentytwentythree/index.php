@@ -56,6 +56,7 @@ get_header();
 					<?php endwhile; ?>
 					<nav class="archiveNav">
 						<?php echo paginate_links(array('total' => $the_query->max_num_pages)); ?>
+						<a href="https://provo.edu/news/district-new-archive/" class="page-numbers">Archive Posts</a>
 					</nav>
 				<?php else :
 					echo '<p>No Content Found</p>';
