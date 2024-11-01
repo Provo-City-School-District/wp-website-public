@@ -7,7 +7,7 @@ get_header();
 <main id="mainContent" class="sidebar">
     <?php custom_breadcrumbs(); ?>
     <div id="currentPage">
-        <h1>District News</h1>
+        <h1><?= the_title(); ?></h1>
         <div class="postList">
             <div class="grid3">
                 <?php
