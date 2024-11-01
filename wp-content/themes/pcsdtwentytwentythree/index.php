@@ -13,7 +13,7 @@ get_header();
 				$args = array(
 					'post_type' => 'post',
 					'post_status' => 'publish',
-					'posts_per_page' => 10,
+					// 'posts_per_page' => 12,
 					'post__not_in' => array(1012), // Exclude post ID 1012
 					'date_query' => array(
 						array(
