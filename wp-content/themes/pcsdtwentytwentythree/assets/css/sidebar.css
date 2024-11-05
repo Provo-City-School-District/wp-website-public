@@ -6,6 +6,10 @@
   color: var(--theme-white);
 }
 
+.rightSidebar p a:hover {
+  color: var(--link-hover-color);
+}
+
 .rightSidebar.categories p {
   color: var(--theme-black);
 }
