@@ -283,6 +283,15 @@ function directory_func($atts)
 }
 add_shortcode('directory', 'directory_func');
 
+//[frontpage_categories]
+function frontpage_categories_menu()
+{
+	ob_start();
+	wp_nav_menu(array('menu' => 'frontpage-categories'));
+	return ob_get_clean();
+}
+add_shortcode('frontpage_categories', 'frontpage_categories_menu');
+
 /*==========================================================================================
 Add Length Column to the Wordpress Dashboard
 ============================================================================================*/
