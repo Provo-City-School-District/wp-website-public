@@ -286,11 +286,11 @@ add_shortcode('directory', 'directory_func');
 //[frontpage_categories]
 function frontpage_categories_menu()
 {
-	echo '<div class="categories-6h">';
 	ob_start();
+	echo '<div class="categories-6h">';
 	wp_nav_menu(array('menu' => 'frontpage-categories'));
-	return ob_get_clean();
 	echo '</div>';
+	return ob_get_clean();
 }
 add_shortcode('frontpage_categories', 'frontpage_categories_menu');
 
