@@ -1,23 +1,27 @@
 <aside id="rightSidebar" class="rightSidebar">
-	<ul class="imagelist">
-		<li>
-			<a href="https://provo.edu/provo-adult-education/provo-adult-education-calendar/">
-				<img src="//globalassets.provo.edu/image/icons/calendar-lt.svg" alt="" />
-				<span>Adult Ed Calendar</span>
-			</a>
-		</li>
-		<li>
-			<a href="https://provo.edu/provo-adult-education/english-language-acquisition-calendar/">
-				<img src="//globalassets.provo.edu/image/icons/calendar-lt.svg" alt="" />
-				<span>ELA Calendar</span>
-			</a>
-		</li>
-	</ul>	
-	<h2>Contact Provo Adult Education</h2>
-	<?php
-	echo file_get_contents('https://provo.edu/directory_page/provo-adult-education/');
-	?>
+<h2>Provo Adult Education</h2>
+<address>
+	636 North Independence Avenue<br />
+	Provo, UT 84601<br />
+</address>
+<p><em>Portables South of Independence High School</em><p>
+	
+<h2>Provo Adult Education Contacts</h2>
+<?php
+echo file_get_contents('https://provo.edu/directory_page/provo-adult-education/');
+?>
 
+<h2>Adult English Language Acquisition</h2>
+<address>
+	750 West 200 North<br />
+	Provo, UT 84601<br />
+</address>
+<p><em>Enter on the North side of the building</em><p>
+	
+<h2>Adult English Language Acquisition Contacts</h2>
+<?php
+echo file_get_contents('https://provo.edu/directory_page/adult-english-language-acquisition/');
+?>
 	<!--		
 		
 		I changed this content out for what's available on 02-18-2020 for WO54222
