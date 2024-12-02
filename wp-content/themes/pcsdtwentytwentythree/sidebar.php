@@ -4,10 +4,10 @@
 	if ($sidebar) {
 		switch ($sidebar) {
 			case 'categories':
-				$page_id = 123; // Replace with the actual page ID for Business
+				$page_id = 80354; // Replace with the actual page ID for Business
 				break;
 			case 'business-finance':
-				$page_id = 123; // Replace with the actual page ID for Business
+				$page_id = 80356; // Replace with the actual page ID for Business
 				break;
 			case 'childNutrition':
 				$page_id = 124; // Replace with the actual page ID for Child Nutrition
