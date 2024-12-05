@@ -20,6 +20,7 @@ get_header();
 							'inclusive' => true,
 						),
 					),
+					'paged' => $paged,
 				);
 				$the_query = new WP_Query($args);
 				if ($the_query->have_posts()) :
