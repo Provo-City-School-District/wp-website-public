@@ -2,14 +2,14 @@
 get_header();
 ?>
 <main id="mainContent" class="sidebar">
-	
-		<ol class="breadcrumbs" id="breadcrumbs">
-			<li><a href="https://provo.edu/">Home</a> / </li>
-			<li><a href="https://provo.edu/career-technical-education/">Career & Technical Education</a> / </li>
-			<li><a href="https://provo.edu/career-technical-education/wbl-internships-caps/cte-internship-locations/">Internship Locations Organized by Career Pathway</a> / </li>
-			<li><?php single_cat_title(); ?></li>
-		</ol>
-		<div id="currentPage">
+
+	<ol class="breadcrumbs" id="breadcrumbs">
+		<li><a href="https://provo.edu/">Home</a> / </li>
+		<li><a href="https://provo.edu/career-technical-education/">Career & Technical Education</a> / </li>
+		<li><a href="https://provo.edu/career-technical-education/wbl-internships-caps/cte-internship-locations/">Internship Locations Organized by Career Pathway</a> / </li>
+		<li><?php single_cat_title(); ?></li>
+	</ol>
+	<div id="currentPage">
 		<article class="activePost">
 			<h1>CTE Career Pathways : <?php single_cat_title(); ?></h1>
 			<?php
@@ -113,8 +113,17 @@ get_header();
 			}
 			?>
 		</article>
-		</div>
-	<?php get_sidebar('categories'); ?>
+	</div>
+	<aside>
+		<?php
+		$page = get_post(80354);
+		if ($page) {
+			echo do_shortcode(apply_filters('the_content', $page->post_content));
+		} else {
+			echo '<p>Page not found.</p>';
+		}
+		?>
+	</aside>
 </main>
 <?php
 get_footer();

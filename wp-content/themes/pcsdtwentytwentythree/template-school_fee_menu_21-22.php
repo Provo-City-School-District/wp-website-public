@@ -10,7 +10,7 @@ get_header();
 		<li><a href="https://provo.edu/school-fees/">School Fees</a> / </li>
 		<li>School Fees 21-22</li>
 	</ol>
-		<div id="currentPage">
+	<div id="currentPage">
 		<article class="activePost schoolFeesMenu">
 			<?php
 			if (have_posts()) :
@@ -134,8 +134,8 @@ get_header();
 			?>
 			<div class="clear"></div>
 		</article>
-		</div>
-		<?php get_sidebar('school-fees'); ?>
+	</div>
+	<?php get_sidebar(); ?>
 </main>
 <?php
 get_footer();

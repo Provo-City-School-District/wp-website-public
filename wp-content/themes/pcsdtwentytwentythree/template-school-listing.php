@@ -6,8 +6,8 @@ get_header();
 ?>
 <main id="mainContent" class="sidebar">
 
-		<?php custom_breadcrumbs(); ?>
-		<div id="currentPage">
+	<?php custom_breadcrumbs(); ?>
+	<div id="currentPage">
 
 		<article class="activePost">
 			<?php
@@ -310,12 +310,11 @@ get_header();
 			<div class="clear"></div>
 		</article>
 
-		</div>
-		
+	</div>
+
 
 	<?php
-	$sidebar = get_field('sidebar');
-	get_sidebar($sidebar);
+	get_sidebar();
 	?>
 </main>
 <?php

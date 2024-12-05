@@ -7,14 +7,14 @@ get_header();
 ?>
 <main id="mainContent" class="sidebar">
 	<?php custom_breadcrumbs(); ?>
-		<div id="currentPage">
-			<h1><?php the_title(); ?></h1>
-			<?php the_content();
-					
-			
-			wp_reset_query();
-			?>
-		
+	<div id="currentPage">
+		<h1><?php the_title(); ?></h1>
+		<?php the_content();
+
+
+		wp_reset_query();
+		?>
+
 
 		<section class="grid3 altColors">
 			<?php if (get_field('square_1')) { ?>
@@ -114,10 +114,10 @@ get_header();
 				</aside>
 			<?php }	?>
 		</section><!-- departmentResources end -->
-		</div>
+	</div>
 	<?php
-	$sidebar = get_field('sidebar');
-	get_sidebar($sidebar);
+
+	get_sidebar();
 	?>
 </main>
 <?php

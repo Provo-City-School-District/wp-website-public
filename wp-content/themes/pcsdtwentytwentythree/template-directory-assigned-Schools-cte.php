@@ -41,34 +41,33 @@ if ($sidebar->have_posts()) {
 			}
 			?>
 			<ul>
-			<?php
-				
+				<?php
+
 				if (count(get_field('assigned_schools')) > 0) {
 					$i = 0;
 					$scount = count(get_field('assigned_schools'), COUNT_RECURSIVE);
 					$assigned_schools = get_field('assigned_schools');
 					//echo $scount;
 
-				
+
 					echo '<li class="assignedSchool">';
-						
-						if ($scount == 1) {
-							echo $assigned_schools[0];
-						} elseif ($scount > 1) {
-							foreach ($assigned_schools as $school) {
-								if ($i == $scount - 1) {
-									echo $school;
-								} else {
-									echo $school . ', ';
-								}
-								$i++;
+
+					if ($scount == 1) {
+						echo $assigned_schools[0];
+					} elseif ($scount > 1) {
+						foreach ($assigned_schools as $school) {
+							if ($i == $scount - 1) {
+								echo $school;
+							} else {
+								echo $school . ', ';
 							}
+							$i++;
 						}
-						
+					}
+
 					echo '</li>';
-				
 				}
-				
+
 				/*
 				if (get_field('title')) {
 				?>
@@ -125,7 +124,7 @@ if ($sidebar->have_posts()) {
 				}
 				*/
 				?>
-				
+
 			</ul>
 		</article>
 
@@ -133,6 +132,7 @@ if ($sidebar->have_posts()) {
 	}
 } else {
 	//nothing
+	echo 'no content';
 }
 wp_reset_postdata();
 ?>

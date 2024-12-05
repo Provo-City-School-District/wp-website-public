@@ -26,32 +26,29 @@ get_header();
 
 
 
-	</section>
-	<section class="grid3 altColors">
-		<?php
-		$pageTiles = get_field('page_tiles');
+		</section>
+		<section class="grid3 altColors">
+			<?php
+			$pageTiles = get_field('page_tiles');
 
-		if ($pageTiles) {
-			foreach ($pageTiles as $tile) {
-				$image = $tile['tile_photo'];
-		?>
-				<aside class="tile">
-					<div class="featured-image">
-						<img src="<?php echo wp_get_attachment_image_url($image, 'full'); ?>" alt="" />
-					</div>
-					<?php echo wpautop($tile['tile_content']); ?>
-				</aside>
-		<?php
+			if ($pageTiles) {
+				foreach ($pageTiles as $tile) {
+					$image = $tile['tile_photo'];
+			?>
+					<aside class="tile">
+						<div class="featured-image">
+							<img src="<?php echo wp_get_attachment_image_url($image, 'full'); ?>" alt="" />
+						</div>
+						<?php echo wpautop($tile['tile_content']); ?>
+					</aside>
+			<?php
+				}
 			}
-		}
-		?>
-	</section><!-- departmentResources end -->
+			?>
+		</section><!-- departmentResources end -->
 	</div>
 	<?php
-	$sidebar = get_field('sidebar');
-
-	get_sidebar($sidebar);
-
+	get_sidebar();
 	?>
 </main>
 

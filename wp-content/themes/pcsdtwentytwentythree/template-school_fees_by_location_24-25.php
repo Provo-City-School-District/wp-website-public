@@ -266,7 +266,7 @@ I changed the code so that the search would happen before the if statement and t
 			<div class="clear"></div>
 		</article>
 	</div>
-	<?php get_sidebar('school-fees'); ?>
+	<?php get_sidebar(); ?>
 </main>
 <?php
 get_footer();

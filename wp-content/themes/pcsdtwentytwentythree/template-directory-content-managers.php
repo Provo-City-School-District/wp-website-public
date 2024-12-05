@@ -22,75 +22,76 @@ $directory_args = array(
 $sidebar = new WP_Query($directory_args);
 ?>
 
-	<?php
-	if ($sidebar->have_posts()) {
-		while ($sidebar->have_posts()) {
-			$sidebar->the_post();
-	?>
+<?php
+if ($sidebar->have_posts()) {
+	while ($sidebar->have_posts()) {
+		$sidebar->the_post();
+?>
 
-			<article class="post personalvCard">
+		<article class="post personalvCard">
+			<?php
+			if (get_the_post_thumbnail_url()) {
+			?>
+				<img class="staff-member-photo" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_field('first_name') ?> <?php echo get_field('last_name') ?>" />
+			<?php
+			} else {
+			?>
+				<img class="staff-member-photo" src="https://provo.edu/wp-content/uploads/2017/02/placeholer.jpg" alt="<?php echo get_field('first_name') ?> <?php echo get_field('last_name') ?>" />
+			<?php
+			}
+			?>
+			<ul>
 				<?php
-				if (get_the_post_thumbnail_url()) {
+				if (get_field('website_address')) {
 				?>
-					<img class="staff-member-photo" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_field('first_name') ?> <?php echo get_field('last_name') ?>" />
-				<?php
-				} else {
-				?>
-					<img class="staff-member-photo" src="https://provo.edu/wp-content/uploads/2017/02/placeholer.jpg" alt="<?php echo get_field('first_name') ?> <?php echo get_field('last_name') ?>" />
+					<li class="website"><a href="<?php echo get_field('website_address') ?>"><?php echo get_field('website_link_label') ?></a></li>
 				<?php
 				}
 				?>
-				<ul>
-					<?php
-					if (get_field('website_address')) {
-					?>
-						<li class="website"><a href="<?php echo get_field('website_address') ?>"><?php echo get_field('website_link_label') ?></a></li>
-					<?php
-					}
-					?>
-					<li class="name"><strong><?php echo get_field('first_name') ?> <?php echo get_field('last_name') ?></strong></li>
-					<?php
-					if (get_field('phone')) {
-					?>
-						<li class="phone"><?php echo get_field('phone') ?></li>
-					<?php
-					}
-					?>
-					<?php
-					if (get_field('email')) {
-					?>
-						<li class="email"><a href="https://provo.edu/district-office-directory/email-form?staff=<?php echo get_the_ID() ?>">Email <?php echo get_field('first_name') . ' ' . get_field('last_name') ?></a></li>
-					<?php
-					}
-					?>
-					<?php
-					if (get_field('facebook_url')) {
-					?>
-						<li><a href="<?php echo get_field('facebook_url') ?>">Facebook</a></li>
-					<?php
-					}
-					?>
-					<?php
-					if (get_field('twitter_url')) {
-					?>
-						<li><a href="<?php echo get_field('twitter_url') ?>">Twitter</a></li>
-					<?php
-					}
-					?>
-					<?php
-					if (get_field('instagram_url')) {
-					?>
-						<li><a href="<?php echo get_field('instagram_url') ?>">Instagram</a></li>
-					<?php
-					}
-					?>
-				</ul>
-			</article>
+				<li class="name"><strong><?php echo get_field('first_name') ?> <?php echo get_field('last_name') ?></strong></li>
+				<?php
+				if (get_field('phone')) {
+				?>
+					<li class="phone"><?php echo get_field('phone') ?></li>
+				<?php
+				}
+				?>
+				<?php
+				if (get_field('email')) {
+				?>
+					<li class="email"><a href="https://provo.edu/district-office-directory/email-form?staff=<?php echo get_the_ID() ?>">Email <?php echo get_field('first_name') . ' ' . get_field('last_name') ?></a></li>
+				<?php
+				}
+				?>
+				<?php
+				if (get_field('facebook_url')) {
+				?>
+					<li><a href="<?php echo get_field('facebook_url') ?>">Facebook</a></li>
+				<?php
+				}
+				?>
+				<?php
+				if (get_field('twitter_url')) {
+				?>
+					<li><a href="<?php echo get_field('twitter_url') ?>">Twitter</a></li>
+				<?php
+				}
+				?>
+				<?php
+				if (get_field('instagram_url')) {
+				?>
+					<li><a href="<?php echo get_field('instagram_url') ?>">Instagram</a></li>
+				<?php
+				}
+				?>
+			</ul>
+		</article>
 
-	<?php
-		}
-	} else {
-		//nothing
+<?php
 	}
-	wp_reset_postdata();
-	?>
+} else {
+	//nothing
+	echo 'no content';
+}
+wp_reset_postdata();
+?>

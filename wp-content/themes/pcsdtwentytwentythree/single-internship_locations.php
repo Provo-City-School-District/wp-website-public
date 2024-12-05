@@ -2,14 +2,14 @@
 get_header();
 ?>
 <main id="mainContent" class="sidebar">
-	
-		<ol class="breadcrumbs" id="breadcrumbs">
-			<li><a href="https://provo.edu/">Home</a> / </li>
-			<li><a href="https://provo.edu/career-technical-education/">Career & Technical Education</a> / </li>
-			<li><a href="https://provo.edu/career-technical-education/wbl-internships-caps/cte-internship-locations/">Internship Locations Organized by Career Pathway</a> / </li>
-			<li><?php single_post_title(); ?></li>
-		</ol>
-		<div id="currentPage">
+
+	<ol class="breadcrumbs" id="breadcrumbs">
+		<li><a href="https://provo.edu/">Home</a> / </li>
+		<li><a href="https://provo.edu/career-technical-education/">Career & Technical Education</a> / </li>
+		<li><a href="https://provo.edu/career-technical-education/wbl-internships-caps/cte-internship-locations/">Internship Locations Organized by Career Pathway</a> / </li>
+		<li><?php single_post_title(); ?></li>
+	</ol>
+	<div id="currentPage">
 		<article class="activePost feePost">
 			<?php
 
@@ -49,8 +49,8 @@ get_header();
 			?>
 			<div class="bottom"></div>
 		</article>
-		</div>
-	<?php get_sidebar('cte'); ?>
+	</div>
+	<?php get_sidebar(); ?>
 </main>
 <?php
 get_footer();

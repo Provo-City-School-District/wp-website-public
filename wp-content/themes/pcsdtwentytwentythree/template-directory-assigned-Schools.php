@@ -27,7 +27,7 @@ $sidebar = new WP_Query($directory_args);
 		while ($sidebar->have_posts()) {
 			$sidebar->the_post();
 	?>
-			
+
 			<article class="post personalvCard">
 				<?php
 				if (get_the_post_thumbnail_url()) {
@@ -115,12 +115,12 @@ $sidebar = new WP_Query($directory_args);
 							}
 							?>
 						</li>
-					<?php
-					if (get_field('term_began') && get_field('term_end')) {
+						<?php
+						if (get_field('term_began') && get_field('term_end')) {
 						?>
 							<li><strong>Term</strong>: <?php echo get_field('term_began') ?> - <?php echo get_field('term_end') ?></li>
-						<?php
-							}
+					<?php
+						}
 					}
 					?>
 				</ul>
@@ -129,7 +129,7 @@ $sidebar = new WP_Query($directory_args);
 	<?php
 		}
 	} else {
-		//nothing
+		echo '<p>No Content Found</p>';
 	}
 	wp_reset_postdata();
 	?>

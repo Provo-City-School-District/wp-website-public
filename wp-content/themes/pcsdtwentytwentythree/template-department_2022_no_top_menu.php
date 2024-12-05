@@ -12,7 +12,7 @@ get_header();
 
 		<h1><?php the_title(); ?></h1>
 		<?php the_content(); ?>
-		
+
 		<section class="teasers">
 
 			<?php
@@ -104,9 +104,7 @@ get_header();
 	<!-- Current Page Content End -->
 	<?php
 	wp_reset_query();
-	// print_r(get_fields());
-	$sidebar = get_field('sidebar');
-	get_sidebar($sidebar);
+	get_sidebar();
 	?>
 </main>
 <?php
