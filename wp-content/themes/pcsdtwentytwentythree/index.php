@@ -65,7 +65,7 @@ get_header();
 			</div>
 		</div>
 	</div>
-	<aside>
+	<aside id="rightSidebar" class="rightSidebar">
 		<?php
 		$page = get_post(80354);
 		if ($page) {
