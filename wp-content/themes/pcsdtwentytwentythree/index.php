@@ -11,7 +11,7 @@ get_header();
 				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				// excluding ID 1012. which is the Board Schedule.
 				$args = array(
-					'post_type' => 'post',
+					'post_type' => array('post', 'podcast'),
 					'post_status' => 'publish',
 					'post__not_in' => array(1012), // Exclude post ID 1012
 					'date_query' => array(
