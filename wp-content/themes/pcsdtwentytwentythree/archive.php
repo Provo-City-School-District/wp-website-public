@@ -56,7 +56,16 @@ get_header();
 				endif; // Close the if statement
 	?>
 	</div> <!-- Close the currentPage div -->
-	<?php get_sidebar('categories'); ?>
+	<aside>
+		<?php
+		$page = get_post(80354);
+		if ($page) {
+			echo do_shortcode(apply_filters('the_content', $page->post_content));
+		} else {
+			echo '<p>Page not found.</p>';
+		}
+		?>
+	</aside>
 </main> <!-- Close the main tag -->
 <?php
 get_footer();

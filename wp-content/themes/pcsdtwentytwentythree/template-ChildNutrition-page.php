@@ -6,11 +6,11 @@
 get_header();
 ?>
 <main id="mainContent" class="sidebar">
-	
-		<?php custom_breadcrumbs(); ?>
-		<div id="currentPage">
+
+	<?php custom_breadcrumbs(); ?>
+	<div id="currentPage">
 		<article id="activePost" class="activePost">
-		<?php
+			<?php
 			if (have_posts()) :
 				while (have_posts()) : the_post(); ?>
 					<h1><?php the_title(); ?></h1>
@@ -26,18 +26,18 @@ get_header();
 			endif;
 			?>
 		</article>
-			
-			<aside class="fwContent">
+
+		<aside class="fwContent">
 			<?php
 			$cn_nda = get_post(71667);
 			echo do_shortcode($cn_nda->post_content);
 			?>
-			</aside>
+		</aside>
 
-			<div class="clear"></div>
-		</div>
-	
-	<?php get_sidebar('childNutrition'); ?>
+		<div class="clear"></div>
+	</div>
+
+	<?php get_sidebar(); ?>
 </main>
 <?php
 get_footer();

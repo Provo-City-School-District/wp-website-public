@@ -74,7 +74,7 @@ if ($sidebar->have_posts()) {
 	}
 } else {
 	//nothing
-	//echo 'no content';
+	echo 'no content';
 }
 wp_reset_postdata();
 ?>

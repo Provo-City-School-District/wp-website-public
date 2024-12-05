@@ -55,16 +55,6 @@ get_header();
 
 			</article>
 		</div>
-
-
-
-
-
-
-
-
-
-
 		<section class="grid3 altColors">
 			<?php if (get_field('square_1')) { ?>
 				<aside class="post">
@@ -162,8 +152,6 @@ get_header();
 					<?php the_field('square_12'); ?>
 				</aside>
 			<?php }	?>
-
-
 		</section>
 		<aside class="fwContent">
 			<?php
@@ -176,8 +164,7 @@ get_header();
 	<!-- Current Page Content End -->
 	<?php
 	wp_reset_query();
-	$sidebar = get_field('sidebar');
-	get_sidebar($sidebar);
+	get_sidebar();
 	?>
 </main>
 <?php

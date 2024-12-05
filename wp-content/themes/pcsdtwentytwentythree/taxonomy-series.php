@@ -23,11 +23,11 @@ get_header();
 								<div class="episode-player">
 									<?php //echo ssp_player(); 
 									// echo do_shortcode('[ss_player]');
-									the_excerpt(  );
+									the_excerpt();
 									?>
 								</div>
 							<?php endif; ?>
-							
+
 						</div>
 					<?php endwhile; ?>
 				</div>
@@ -38,7 +38,16 @@ get_header();
 			?>
 		</article>
 	</div>
-	<?php get_sidebar('categories'); ?>
+	<aside>
+		<?php
+		$page = get_post(80354);
+		if ($page) {
+			echo do_shortcode(apply_filters('the_content', $page->post_content));
+		} else {
+			echo '<p>Page not found.</p>';
+		}
+		?>
+	</aside>
 </main>
 <?php
 get_footer();

@@ -168,8 +168,7 @@ get_header();
 	<!-- Current Page Content End -->
 	<?php
 	wp_reset_query();
-	$sidebar = get_field('sidebar');
-	get_sidebar($sidebar);
+	get_sidebar();
 	?>
 </main>
 <?php

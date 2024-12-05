@@ -147,32 +147,14 @@ get_header();
 
 
 		<?php
-
-
 		}
-
 		?>
-
-
-
-
-
-
-
-
-
-
-
-
-
 	</div>
 	<!-- Current Page Content End -->
 
 	<?php
 	wp_reset_query();
-	// print_r(get_fields());
-	$sidebar = get_field('sidebar');
-	get_sidebar($sidebar);
+	get_sidebar();
 	?>
 </main>
 <?php

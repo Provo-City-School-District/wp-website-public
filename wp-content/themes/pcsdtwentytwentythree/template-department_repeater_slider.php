@@ -80,8 +80,8 @@ get_header();
 		</section><!-- departmentResources end -->
 	</div>
 	<?php
-	$sidebar = get_field('sidebar');
-	get_sidebar($sidebar);
+
+	get_sidebar();
 	?>
 </main>
 <?php

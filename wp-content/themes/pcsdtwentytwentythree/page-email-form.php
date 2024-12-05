@@ -109,10 +109,16 @@ $district7 = '(District 7: Gina Hales)';
 			</article>
 		</div>
 	</section>
-	<?php
-	$sidebar = get_field('sidebar');
-	get_sidebar($sidebar);
-	?>
+	<aside>
+		<?php
+		$page = get_post(80354);
+		if ($page) {
+			echo do_shortcode(apply_filters('the_content', $page->post_content));
+		} else {
+			echo '<p>Page not found.</p>';
+		}
+		?>
+	</aside>
 </main>
 <script>
 	// Get all the radio buttons

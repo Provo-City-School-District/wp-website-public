@@ -6,11 +6,11 @@ get_header();
 ?>
 <main id="mainContent" class="sidebar">
 	<ol class="breadcrumbs" id="breadcrumbs">
-			<li><a href="https://provo.edu/">Home</a> / </li>
-			<li><a href="https://provo.edu/pagos-escolares/">Pagos Escolares</a> / </li>
-			<li>Pagos Escolares 22-23</li>
-		</ol>
-		<div id="currentPage">
+		<li><a href="https://provo.edu/">Home</a> / </li>
+		<li><a href="https://provo.edu/pagos-escolares/">Pagos Escolares</a> / </li>
+		<li>Pagos Escolares 22-23</li>
+	</ol>
+	<div id="currentPage">
 		<article class="activePost schoolFeesMenu">
 			<?php
 			if (have_posts()) :
@@ -133,8 +133,8 @@ get_header();
 			?>
 			<div class="clear"></div>
 		</article>
-		</div>
-	<?php get_sidebar('school-fees'); ?>
+	</div>
+	<?php get_sidebar(); ?>
 </main>
 <?php
 get_footer();

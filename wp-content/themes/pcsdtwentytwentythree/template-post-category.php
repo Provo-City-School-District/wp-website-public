@@ -82,7 +82,7 @@ get_header();
         </div>
     </div>
     <?php
-    get_sidebar('categories');
+    get_sidebar();
     ?>
 </main>
 <?php

@@ -146,7 +146,17 @@ get_header();
 
 	</section>
 	<!-- Current Page Content End -->
-	<?php get_sidebar('categories'); ?>
+
+	<aside>
+		<?php
+		$page = get_post(80354);
+		if ($page) {
+			echo do_shortcode(apply_filters('the_content', $page->post_content));
+		} else {
+			echo '<p>Page not found.</p>';
+		}
+		?>
+	</aside>
 </main>
 <?php
 get_footer();

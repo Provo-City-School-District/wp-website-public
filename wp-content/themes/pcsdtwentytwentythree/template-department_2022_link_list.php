@@ -8,7 +8,7 @@ get_header();
 	<?php custom_breadcrumbs(); ?>
 	<!-- Current Page Content -->
 	<div id="currentPage">
-	<h1><?php the_title(); ?></h1>
+		<h1><?php the_title(); ?></h1>
 		<?php
 		if (get_field('content_location') == 'before') {
 			the_content();
@@ -43,8 +43,7 @@ get_header();
 	<!-- Current Page Content End -->
 	<?php
 	wp_reset_query();
-	$sidebar = get_field('sidebar');
-	get_sidebar($sidebar);
+	get_sidebar();
 	?>
 </main>
 <?php
