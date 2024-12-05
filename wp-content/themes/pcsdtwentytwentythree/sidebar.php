@@ -4,121 +4,118 @@
 	if ($sidebar) {
 		switch ($sidebar) {
 			case 'categories':
-				$page_id = 80354; // Replace with the actual page ID for Business
+				$page_id = 80354;
 				break;
 			case 'business-finance':
-				$page_id = 80356; // Replace with the actual page ID for Business
+				$page_id = 80356;
 				break;
 			case 'childNutrition':
-				$page_id = 124; // Replace with the actual page ID for Child Nutrition
-				break;
-			case 'constructionSidbar':
-				$page_id = 125; // Replace with the actual page ID for Construction Projects
+				$page_id = 80470;
 				break;
 			case 'counseling':
-				$page_id = 126; // Replace with the actual page ID for Counseling
+				$page_id = 80474;
 				break;
 			case 'cte':
-				$page_id = 127; // Replace with the actual page ID for CTE
+				$page_id = 80477;
 				break;
 			case 'demographics':
-				$page_id = 128; // Replace with the actual page ID for Demographics
+				$page_id = 80479;
 				break;
 			case 'eastbay':
-				$page_id = 129; // Replace with the actual page ID for East Bay Post High
+				$page_id = 80481;
 				break;
 			case 'eschool':
-				$page_id = 130; // Replace with the actual page ID for eSchool
+				$page_id = 80483;
 				break;
 			case 'employment':
-				$page_id = 131; // Replace with the actual page ID for Employment Opportunities
+				$page_id = 80486;
 				break;
 			case 'foundation':
-				$page_id = 132; // Replace with the actual page ID for Provo Foundation
+				$page_id = 80490;
 				break;
 			case 'humanResources':
-				$page_id = 133; // Replace with the actual page ID for Human Resources
+				$page_id = 80492;
 				break;
 			case 'maint':
-				$page_id = 134; // Replace with the actual page ID for Maintenance
+				$page_id = 80495;
 				break;
 			case 'nurses':
-				$page_id = 135; // Replace with the actual page ID for Nurse
+				$page_id = 80497;
 				break;
 			case 'officeDirectory':
-				$page_id = 136; // Replace with the actual page ID for Office Directory
+				$page_id = 80499;
 				break;
 			case 'pae':
-				$page_id = 137; // Replace with the actual page ID for Provo Adult Education
+				$page_id = 80501;
 				break;
 			case 'policiesSidebar':
-				$page_id = 138; // Replace with the actual page ID for Policies
+				$page_id = 80504;
 				break;
 			case 'preschool':
-				$page_id = 139; // Replace with the actual page ID for PreSchool
+				$page_id = 80506;
 				break;
 			case 'prSidebar':
-				$page_id = 140; // Replace with the actual page ID for Public Relations
+				$page_id = 80510;
 				break;
 			case 'SchoolBoard':
-				$page_id = 141; // Replace with the actual page ID for School Board
-				break;
-			case 'schools':
-				$page_id = 142; // Replace with the actual page ID for Schools Listing
+				$page_id = 80512;
 				break;
 			case 'spanishpoliciesSidebar':
-				$page_id = 143; // Replace with the actual page ID for Spanish Policies Sidebar
+				$page_id = 80520;
 				break;
 			case 'specialEd':
-				$page_id = 144; // Replace with the actual page ID for Special Education
+				$page_id = 80522;
 				break;
 			case 'studentServices':
-				$page_id = 145; // Replace with the actual page ID for Student Services
+				$page_id = 80524;
 				break;
 			case 'teachingLearning':
-				$page_id = 146; // Replace with the actual page ID for Teaching & Learning
+				$page_id = 80526;
 				break;
 			case 'titlei':
-				$page_id = 79815; // Replace with the actual page ID for Title I
+				$page_id = 80528;
 				break;
 			case 'transportation':
-				$page_id = 148; // Replace with the actual page ID for Transportation
+				$page_id = 80530;
 				break;
 			case 'superintendent':
-				$page_id = 149; // Replace with the actual page ID for Superintendent
+				$page_id = 80532;
 				break;
 			case 'peachjar':
-				$page_id = 150; // Replace with the actual page ID for Peachjar
+				$page_id = 80534;
 				break;
 			case 'initiative':
-				$page_id = 151; // Replace with the actual page ID for Provo Way Innovative Learning Initiative
+				$page_id = 80536;
 				break;
 			case 'school-fees':
-				$page_id = 152; // Replace with the actual page ID for School Fees
+				$page_id = 80538;
 				break;
 			case 'studentDataPrivacy':
-				$page_id = 153; // Replace with the actual page ID for Student Data Privacy
+				$page_id = 80540;
 				break;
 			case 'camp':
-				$page_id = 154; // Replace with the actual page ID for Camp Big Springs
+				$page_id = 80542;
 				break;
 			case 'equity':
-				$page_id = 155; // Replace with the actual page ID for Equity & Diversity
+				$page_id = 80544;
 				break;
 			case 'tech':
-				$page_id = 156; // Replace with the actual page ID for Technology
+				$page_id = 80546;
 				break;
 			case 'covid':
-				$page_id = 157; // Replace with the actual page ID for Coronavirus
+				$page_id = 80548;
 				break;
 			case 'SealOfBiliteracy':
-				$page_id = 158; // Replace with the actual page ID for Seal of Biliteracy
+				$page_id = 80550;
 				break;
 			case 'ctecaps':
-				$page_id = 159; // Replace with the actual page ID for CTE CAPS
+				$page_id = 80552;
+				break;
+			case 'slateMountain':
+				$page_id = 80554;
 				break;
 			default:
-				$page_id = null; // Default case if no match is found
+				$page_id = 80354; // Default case if no match is found
 				break;
 		}
 		// Display the content of the selected page
