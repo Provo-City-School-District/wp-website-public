@@ -24,7 +24,7 @@ get_header();
 			</script>
 		</div>
 	</section>
-	<aside>
+	<aside id="rightSidebar" class="rightSidebar">
 		<?php
 		$page = get_post(80354);
 		if ($page) {
