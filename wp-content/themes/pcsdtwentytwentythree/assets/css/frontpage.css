@@ -47,6 +47,7 @@ Home Page posts
 	overflow: hidden;
 	align-content: center;
 	min-height: 250px;
+	border: 1px solid var(--theme-black);
 }
 
 .posts article::before {
