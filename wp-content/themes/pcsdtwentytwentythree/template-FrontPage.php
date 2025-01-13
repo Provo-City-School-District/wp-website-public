@@ -28,8 +28,6 @@ $get_to_know_fields = get_fields();
 					<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 
 				</header>
-				<?php //echo the_content(); 
-				?>
 			</article>
 			<button class="closeAlert"><img src="https://globalassets.provo.edu/image/icons/round-delete-button-white.svg" alt="Close Alerts" /></button>
 		<?php endwhile;
@@ -70,8 +68,6 @@ $get_to_know_fields = get_fields();
 							<h2><?php the_title(); ?></h2>
 						</a>
 					</article>
-
-
 			<?php endwhile;
 			else :
 				echo '<p>No Sticky Posts Found</p>';

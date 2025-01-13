@@ -94,10 +94,6 @@ Home Page posts
 	}
 }
 
-/* @media (min-width:800px) {
-
-} */
-
 @media (min-width:1000px) {
 	.stories {
 		grid-template-columns: repeat(3, minmax(30%, 1fr));
