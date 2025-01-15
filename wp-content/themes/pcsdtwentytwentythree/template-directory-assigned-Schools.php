@@ -92,12 +92,11 @@ $sidebar = new WP_Query($directory_args);
 					}
 					?>
 					<?php
-					if (count(get_field('assigned_schools')) > 0) {
-						$i = 0;
-						$scount = count(get_field('assigned_schools'), COUNT_RECURSIVE);
-						$assigned_schools = get_field('assigned_schools');
-						//echo $scount;
+					$assigned_schools = get_field('assigned_schools');
 
+					if (is_array($assigned_schools) && count($assigned_schools) > 0) {
+						$i = 0;
+						$scount = count($assigned_schools, COUNT_RECURSIVE);
 					?>
 						<li><strong>Assigned Schools</strong>:
 							<?php
