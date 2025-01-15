@@ -46,8 +46,9 @@ Home Page posts
 	color: var(--theme-white);
 	overflow: hidden;
 	align-content: center;
-	min-height: 250px;
+	min-height: 209px;
 	border: 1px solid var(--theme-black);
+	background-repeat: no-repeat;
 }
 
 .posts article::before {
