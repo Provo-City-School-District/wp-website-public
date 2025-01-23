@@ -39,6 +39,8 @@ services:
         define( 'MEDIA_TRASH', true );
         define( 'EMPTY_TRASH_DAYS', 30); 
         define( 'PP_EDIT_EXCEPTIONS_ALLOW_ATTACHMENT_DELETION', true );
+        define( 'WPCF7_ADMIN_READ_CAPABILITY', 'manage_contactform7' );
+        define( 'WPCF7_ADMIN_READ_WRITE_CAPABILITY', 'manage_contactform7' );
         define( 'DISALLOW_FILE_EDIT', true);
         define( 'WP_MEMORY_LIMIT', '256M' );
     container_name: public_wp
