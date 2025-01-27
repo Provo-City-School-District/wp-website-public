@@ -9,7 +9,9 @@ get_header();
 			<?php
 			// $galleryArray = get_post_gallery_ids($post->ID);
 			if (have_posts()) :
-				while (have_posts()) : the_post(); ?>
+				while (have_posts()) : the_post();
+					$post_id = get_the_ID(); // Define the $post_id variable
+			?>
 					<header class="postmeta">
 						<h1><?php the_title(); ?></h1>
 						<ul>
@@ -20,31 +22,8 @@ get_header();
 							<li><img src="//globalassets.provo.edu/image/icons/hamburger-ltblue.svg" alt="" /><?php the_category(', ') ?></li>
 						</ul>
 					</header>
-					<?php
-					/*
-					if (get_post_gallery_ids($post->ID)) { ?>
-						<header class="featured-gallery">
-							<div class="featured-for">
-								<?php foreach ($galleryArray as $id) { ?>
-									<img src="<?php echo wp_get_attachment_url($id); ?>" alt="" />
-								<?php } ?>
-							</div>
-							<div class="featured-nav">
-								<?php foreach ($galleryArray as $id) { ?>
-									<img src="<?php echo wp_get_attachment_url($id); ?>" alt="" />
-								<?php } ?>
-							</div>
-						</header>
-					<?php } else { ?>
-						<header class="featured-image-full">
-							<?php the_post_thumbnail(); ?>
-						</header>
-					<?php }	
-					*/ ?>
 
-					<?php the_content();
-					// print_r(get_fields());
-					?>
+					<?php the_content(); ?>
 					<footer class="post_sig">
 						<!-- post_sig -->
 						<?php
@@ -94,7 +73,6 @@ get_header();
 				echo '<p>No Content Found</p>';
 			endif;
 			echo do_shortcode('[social_warfare]');
-			//social_warfare();
 			?>
 			<div class="bottom"></div>
 			<section class="postList">
