@@ -82,6 +82,15 @@ function pcsd_assets()
 	}
 }
 add_action('wp_enqueue_scripts', 'pcsd_assets', 9999);
+/*==========================================================================================
+Includes
+============================================================================================*/
+// include shortcodes
+include 'includes/shortcodes.php';
+
+
+
+
 
 //function to check for single custom tempaltes.
 add_filter('template_include', 'var_template_include', 1000);
