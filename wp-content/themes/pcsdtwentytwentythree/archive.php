@@ -19,7 +19,9 @@ get_header();
 					}
 				}
 				if (have_posts()) :
-					while (have_posts()) : the_post(); ?>
+					while (have_posts()) : the_post();
+						$post_id = get_the_ID(); // Define the $post_id variable
+				?>
 						<article class="post">
 							<a href="<?php the_permalink(); ?>">
 								<div class="featured-image">

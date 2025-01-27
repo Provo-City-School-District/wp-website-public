@@ -25,7 +25,9 @@ get_header();
 				);
 				$the_query = new WP_Query($args);
 				if ($the_query->have_posts()) :
-					while ($the_query->have_posts()) : $the_query->the_post(); ?>
+					while ($the_query->have_posts()) : $the_query->the_post();
+						$post_id = get_the_ID(); // Define the $post_id variable
+				?>
 						<article class="post">
 							<a href="<?php the_permalink(); ?>">
 								<div class="featured-image">
