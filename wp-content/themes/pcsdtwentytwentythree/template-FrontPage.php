@@ -55,6 +55,7 @@ $get_to_know_fields = get_fields();
 			if ($sticky_query->have_posts()) :
 				while ($sticky_query->have_posts()) : $sticky_query->the_post();
 					$background_image = '';
+					$post_id = get_the_ID(); // Define the $post_id variable
 					if (get_field('featured_image', $post_id)) {
 						$background_image = get_field('featured_image');
 					} elseif (has_post_thumbnail()) {
@@ -119,6 +120,7 @@ $get_to_know_fields = get_fields();
 				));
 				if ($the_query->have_posts()) :
 					while ($the_query->have_posts()) : $the_query->the_post();
+						$post_id = get_the_ID(); // Define the $post_id variable
 						$background_image = '';
 						if (get_field('featured_image', $post_id)) {
 							$background_image = get_field('featured_image');
