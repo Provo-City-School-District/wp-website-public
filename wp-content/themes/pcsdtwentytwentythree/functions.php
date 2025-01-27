@@ -498,40 +498,40 @@ function cptui_register_my_cpts()
 
 	register_post_type("directory", $args);
 
-	/**
-	 * Post Type: Internship Locations
-	 */
+	// /**
+	//  * Post Type: Internship Locations
+	//  */
 
-	$labels = [
-		"name" => __("Internship Locations", "custom-post-type-ui"),
-		"singular_name" => __("Internship Locations", "custom-post-type-ui"),
-	];
+	// $labels = [
+	// 	"name" => __("Internship Locations", "custom-post-type-ui"),
+	// 	"singular_name" => __("Internship Locations", "custom-post-type-ui"),
+	// ];
 
-	$args = [
-		"label" => __("Internship Locations", "custom-post-type-ui"),
-		"labels" => $labels,
-		"description" => "",
-		"public" => true,
-		"publicly_queryable" => true,
-		"show_ui" => true,
-		"show_in_rest" => true,
-		"rest_base" => "",
-		"rest_controller_class" => "WP_REST_Posts_Controller",
-		"has_archive" => true,
-		"show_in_menu" => true,
-		"show_in_nav_menus" => true,
-		"delete_with_user" => false,
-		"exclude_from_search" => false,
-		"capability_type" => "post",
-		"map_meta_cap" => true,
-		"hierarchical" => false,
-		"rewrite" => ["slug" => "internship_locations", "with_front" => true],
-		"query_var" => true,
-		"menu_icon" => "https://globalassets.provo.edu/image/icons/pcsd-icon-16x16.png",
-		"supports" => ["title"],
-	];
+	// $args = [
+	// 	"label" => __("Internship Locations", "custom-post-type-ui"),
+	// 	"labels" => $labels,
+	// 	"description" => "",
+	// 	"public" => true,
+	// 	"publicly_queryable" => true,
+	// 	"show_ui" => true,
+	// 	"show_in_rest" => true,
+	// 	"rest_base" => "",
+	// 	"rest_controller_class" => "WP_REST_Posts_Controller",
+	// 	"has_archive" => true,
+	// 	"show_in_menu" => true,
+	// 	"show_in_nav_menus" => true,
+	// 	"delete_with_user" => false,
+	// 	"exclude_from_search" => false,
+	// 	"capability_type" => "post",
+	// 	"map_meta_cap" => true,
+	// 	"hierarchical" => false,
+	// 	"rewrite" => ["slug" => "internship_locations", "with_front" => true],
+	// 	"query_var" => true,
+	// 	"menu_icon" => "https://globalassets.provo.edu/image/icons/pcsd-icon-16x16.png",
+	// 	"supports" => ["title"],
+	// ];
 
-	register_post_type("internship_locations", $args);
+	// register_post_type("internship_locations", $args);
 
 
 	/**
@@ -826,29 +826,29 @@ Taxonomy: Directory Categories.
 Taxonomy: Internship Location Categories
 ===========================================================================================*/
 
-	$internship_locations_labels = [
-		"name" => __("Internship Location Categories", "custom-post-type-ui"),
-		"singular_name" => __("Internship Location Category", "custom-post-type-ui"),
-	];
+	// $internship_locations_labels = [
+	// 	"name" => __("Internship Location Categories", "custom-post-type-ui"),
+	// 	"singular_name" => __("Internship Location Category", "custom-post-type-ui"),
+	// ];
 
-	$internship_locations_args = [
-		"label" => __("Internship Location Categories", "custom-post-type-ui"),
-		"labels" => $internship_locations_labels,
-		"public" => true,
-		"publicly_queryable" => true,
-		"hierarchical" => true,
-		"show_ui" => true,
-		"show_in_menu" => true,
-		"show_in_nav_menus" => true,
-		"query_var" => true,
-		"rewrite" => ['slug' => 'internship_location_category', 'with_front' => true,],
-		"show_admin_column" => false,
-		"show_in_rest" => true,
-		"rest_base" => "internship_location_category",
-		"rest_controller_class" => "WP_REST_Terms_Controller",
-		"show_in_quick_edit" => false,
-	];
-	register_taxonomy("internship_location_category", ["internship_locations"], $internship_locations_args);
+	// $internship_locations_args = [
+	// 	"label" => __("Internship Location Categories", "custom-post-type-ui"),
+	// 	"labels" => $internship_locations_labels,
+	// 	"public" => true,
+	// 	"publicly_queryable" => true,
+	// 	"hierarchical" => true,
+	// 	"show_ui" => true,
+	// 	"show_in_menu" => true,
+	// 	"show_in_nav_menus" => true,
+	// 	"query_var" => true,
+	// 	"rewrite" => ['slug' => 'internship_location_category', 'with_front' => true,],
+	// 	"show_admin_column" => false,
+	// 	"show_in_rest" => true,
+	// 	"rest_base" => "internship_location_category",
+	// 	"rest_controller_class" => "WP_REST_Terms_Controller",
+	// 	"show_in_quick_edit" => false,
+	// ];
+	// register_taxonomy("internship_location_category", ["internship_locations"], $internship_locations_args);
 }
 add_action('init', 'cptui_register_my_taxes');
 
