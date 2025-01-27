@@ -940,3 +940,40 @@ form .block {
     display: block;
     margin-bottom: 15px;
 }
+
+/*================================================================================================================
+Collapsible Button
+  ================================================================================================================*/
+.collapsible-button {
+    cursor: pointer;
+    position: relative;
+    border-bottom: 1px solid var(--main-blue-color);
+    padding: 10px 0;
+}
+
+.collapsible-button:hover {
+
+    transition: border-left 0.3s ease;
+    border-left: 2px solid var(--main-blue-color);
+    padding-left: 10px;
+}
+
+.collapsible-button::before {
+    content: '+ ';
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+    border-right: 1px solid var(--main-blue-color);
+    transition: transform 0.3s ease;
+}
+
+.collapsible-button.exposed::before {
+    content: '- ';
+    transform: rotate(180deg);
+}
+
+.collapsible-button.exposed {
+    background-color: var(--main-blue-color);
+    color: var(--main-ltblue-color);
+}
