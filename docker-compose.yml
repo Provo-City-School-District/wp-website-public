@@ -60,7 +60,7 @@ services:
       - 5021:80
     environment:
       PMA_HOST: public_db
-      UPLOAD_LIMIT: 1000M
+      UPLOAD_LIMIT: 100M
     depends_on:
       - public_db
     logging:
