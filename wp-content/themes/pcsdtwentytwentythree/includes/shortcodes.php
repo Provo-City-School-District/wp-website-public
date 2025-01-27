@@ -34,3 +34,49 @@ function collapsible_area_shortcode($atts, $content = null)
     return ob_get_clean();
 }
 add_shortcode('collapsible_area', 'collapsible_area_shortcode');
+
+/*
+============================================
+Directory Shortcode: [directory url=""]
+============================================
+*/
+function directory_func($atts)
+{
+    $category = shortcode_atts(array(
+        'url' => 'something',
+    ), $atts);
+    $directory_url = "{$category['url']}";
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $directory_url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+    // TODO: to verify certificate, but path to cerificate may move or change in the future. want to think through something so this doesn't get disjointed or forgotten, going to not verify for now
+    // curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
+    // curl_setopt($ch, CURLOPT_CAINFO, '/etc/ssl/wildcard/star_provo_edu.crt'); // Path to CA certificates bundle
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+    $output = curl_exec($ch);
+    if (curl_errno($ch)) {
+        echo 'Error:' . curl_error($ch);
+    }
+    curl_close($ch);
+
+    return $output;
+}
+add_shortcode('directory', 'directory_func');
+
+/*
+============================================
+category tiles Shortcode: [frontpage_categories]
+============================================
+*/
+function frontpage_categories_menu()
+{
+    ob_start();
+    echo '<div class="categories-6h">';
+    wp_nav_menu(array('menu' => 'frontpage-categories'));
+    echo '</div>';
+    return ob_get_clean();
+}
+add_shortcode('frontpage_categories', 'frontpage_categories_menu');

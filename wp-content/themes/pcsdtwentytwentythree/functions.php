@@ -226,53 +226,12 @@ function modified_column_register_sortable($columns)
 add_filter('manage_edit-post_sortable_columns', 'modified_column_register_sortable');
 add_filter('manage_edit-page_sortable_columns', 'modified_column_register_sortable');
 
-//[directory url=""]
-
-function directory_func($atts)
-{
-	$category = shortcode_atts(array(
-		'url' => 'something',
-	), $atts);
-	$directory_url = "{$category['url']}";
-
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, $directory_url);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-
-	// TODO: to verify certificate, but path to cerificate may move or change in the future. want to think through something so this doesn't get disjointed or forgotten, going to not verify for now
-	// curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
-	// curl_setopt($ch, CURLOPT_CAINFO, '/etc/ssl/wildcard/star_provo_edu.crt'); // Path to CA certificates bundle
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-
-	$output = curl_exec($ch);
-	if (curl_errno($ch)) {
-		echo 'Error:' . curl_error($ch);
-	}
-	curl_close($ch);
-
-	return $output;
-}
-add_shortcode('directory', 'directory_func');
-
-//[frontpage_categories]
-function frontpage_categories_menu()
-{
-	ob_start();
-	echo '<div class="categories-6h">';
-	wp_nav_menu(array('menu' => 'frontpage-categories'));
-	echo '</div>';
-	return ob_get_clean();
-}
-add_shortcode('frontpage_categories', 'frontpage_categories_menu');
-
 /*==========================================================================================
 Add Length Column to the Wordpress Dashboard
 ============================================================================================*/
 
 //For Posts
-
 //Add the Length column, next to the Title column:
-
 add_filter('manage_post_posts_columns', function ($columns) {
 	$_columns = [];
 
@@ -579,36 +538,36 @@ function cptui_register_my_cpts()
 	 * Post Type: Digital Signage.
 	 */
 
-	$labels = [
-		"name" => __("Digital Signage", "sunset-child"),
-		"singular_name" => __("Digital Signage", "sunset-child"),
-	];
+	// $labels = [
+	// 	"name" => __("Digital Signage", "sunset-child"),
+	// 	"singular_name" => __("Digital Signage", "sunset-child"),
+	// ];
 
-	$args = [
-		"label" => __("Digital Signage", "sunset-child"),
-		"labels" => $labels,
-		"description" => "",
-		"public" => true,
-		"publicly_queryable" => true,
-		"show_ui" => true,
-		"show_in_rest" => true,
-		"rest_base" => "",
-		"rest_controller_class" => "WP_REST_Posts_Controller",
-		"has_archive" => false,
-		"show_in_menu" => true,
-		"show_in_nav_menus" => true,
-		"delete_with_user" => false,
-		"exclude_from_search" => false,
-		"capability_type" => "post",
-		"map_meta_cap" => true,
-		"hierarchical" => false,
-		"rewrite" => ["slug" => "digital_signage", "with_front" => true],
-		"query_var" => true,
-		"menu_icon" => "https://globalassets.provo.edu/image/icons/pcsd-icon-16x16.png",
-		"supports" => ["title"],
-	];
+	// $args = [
+	// 	"label" => __("Digital Signage", "sunset-child"),
+	// 	"labels" => $labels,
+	// 	"description" => "",
+	// 	"public" => true,
+	// 	"publicly_queryable" => true,
+	// 	"show_ui" => true,
+	// 	"show_in_rest" => true,
+	// 	"rest_base" => "",
+	// 	"rest_controller_class" => "WP_REST_Posts_Controller",
+	// 	"has_archive" => false,
+	// 	"show_in_menu" => true,
+	// 	"show_in_nav_menus" => true,
+	// 	"delete_with_user" => false,
+	// 	"exclude_from_search" => false,
+	// 	"capability_type" => "post",
+	// 	"map_meta_cap" => true,
+	// 	"hierarchical" => false,
+	// 	"rewrite" => ["slug" => "digital_signage", "with_front" => true],
+	// 	"query_var" => true,
+	// 	"menu_icon" => "https://globalassets.provo.edu/image/icons/pcsd-icon-16x16.png",
+	// 	"supports" => ["title"],
+	// ];
 
-	register_post_type("digital_signage", $args);
+	// register_post_type("digital_signage", $args);
 }
 
 add_action('init', 'cptui_register_my_cpts');
