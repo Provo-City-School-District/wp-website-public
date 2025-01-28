@@ -1,17 +1,10 @@
 <footer id="mainFooter">
 	<section class="footerMenu">
-		<?php
-		// create a new cURL resource
-		$globalfooter = curl_init();
-		// set URL and other appropriate options
-		curl_setopt($globalfooter, CURLOPT_URL, 'https://globalassets.provo.edu/globalpages/ada-footer.php');
-		curl_setopt($globalfooter, CURLOPT_HEADER, 0);
-		curl_setopt($globalfooter, CURLOPT_SSL_VERIFYPEER, false);
-		// grab URL and pass it to the browser
-		curl_exec($globalfooter);
-		// close cURL resource, and free up system resources
-		curl_close($globalfooter);
-		?>
+		<ul class="footerMenu">
+			<li><a href="https://provo.edu/notice-of-non-discrimination/">Notice of Non-Discrimination & Accessibility</a> | </li>
+			<li><a href="/website-feedback/">Help us improve our website</a> | </li>
+			<li><a href="https://usbe.az1.qualtrics.com/jfe/form/SV_3eLYRHTJ6wVdzYq">Public Education Hotline Report a Concern Form</a></li>
+		</ul>
 	</section>
 </footer>
 <?php wp_footer(); ?>
