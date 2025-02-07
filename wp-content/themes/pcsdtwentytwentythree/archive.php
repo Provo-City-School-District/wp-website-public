@@ -28,7 +28,7 @@ get_header();
 									<?php
 									if (get_field('featured_image', $post_id)) {
 									?>
-										<img src="<?php echo get_field('featured_image'); ?>" alt="" class="" />
+										<img src="<?php echo get_field('featured_image'); ?>" alt="decorative image" class="" />
 									<?php
 									} elseif (has_post_thumbnail()) {
 										the_post_thumbnail();

@@ -82,7 +82,7 @@ get_header();
 							if ($tile['tile_photo']) {
 							?>
 								<div class="featured-image">
-									<img src="<?php echo wp_get_attachment_image_url($image, 'full'); ?>" alt="" />
+									<img src="<?php echo wp_get_attachment_image_url($image, 'full'); ?>" alt="decorative image" />
 								</div>
 							<?php
 							}

@@ -105,7 +105,7 @@ get_header();
 
 								if (get_field('featured_image', $post_id)) {
 								?>
-									<a href="<?php the_permalink(); ?>"><img src="<?php echo get_field('featured_image'); ?>" alt="" class="" /></a>
+									<a href="<?php the_permalink(); ?>"><img src="<?php echo get_field('featured_image'); ?>" alt="decorative image" class="" /></a>
 								<?php
 								} elseif (has_post_thumbnail()) {
 								?>

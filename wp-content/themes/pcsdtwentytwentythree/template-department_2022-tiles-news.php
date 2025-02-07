@@ -23,7 +23,7 @@ get_header();
 				?>
 						<aside class="tile">
 							<div class="featured-image">
-								<img src="<?php echo wp_get_attachment_image_url($image, 'full'); ?>" alt="" />
+								<img src="<?php echo wp_get_attachment_image_url($image, 'full'); ?>" alt="decorative image" />
 							</div>
 							<h2><?php echo wpautop($tile['tile_title']); ?> </h2>
 							<?php echo wpautop($tile['tile_content']); ?>
@@ -100,7 +100,7 @@ get_header();
 
 							if (get_field('featured_image', $post_id)) {
 							?>
-								<a href="<?php the_permalink(); ?>"><img src="<?php echo get_field('featured_image'); ?>" alt="" class="" /></a>
+								<a href="<?php the_permalink(); ?>"><img src="<?php echo get_field('featured_image'); ?>" alt="decorative image" class="" /></a>
 							<?php
 							} elseif (has_post_thumbnail()) {
 							?>

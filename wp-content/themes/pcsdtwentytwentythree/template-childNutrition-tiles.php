@@ -59,7 +59,7 @@ get_header();
 			<?php if (get_field('square_1')) { ?>
 				<aside class="post">
 					<div class="featured-image">
-						<img src="<?php the_field('square_1_photo'); ?>" alt="" />
+						<img src="<?php the_field('square_1_photo'); ?>" alt="decorative image" />
 					</div>
 					<?php the_field('square_1'); ?>
 				</aside>
@@ -67,7 +67,7 @@ get_header();
 			<?php if (get_field('square_2')) { ?>
 				<aside class="post">
 					<div class="featured-image">
-						<img src="<?php the_field('square_2_photo'); ?>" alt="" />
+						<img src="<?php the_field('square_2_photo'); ?>" alt="decorative image" />
 					</div>
 					<?php the_field('square_2'); ?>
 				</aside>
@@ -75,7 +75,7 @@ get_header();
 			<?php if (get_field('square_3')) { ?>
 				<aside class="post">
 					<div class="featured-image">
-						<img src="<?php the_field('square_3_photo'); ?>" alt="" />
+						<img src="<?php the_field('square_3_photo'); ?>" alt="decorative image" />
 					</div>
 					<?php the_field('square_3'); ?>
 				</aside>
@@ -83,7 +83,7 @@ get_header();
 			<?php if (get_field('square_4')) { ?>
 				<aside class="post">
 					<div class="featured-image">
-						<img src="<?php the_field('square_4_photo'); ?>" alt="" />
+						<img src="<?php the_field('square_4_photo'); ?>" alt="decorative image" />
 					</div>
 					<?php the_field('square_4'); ?>
 				</aside>
@@ -91,7 +91,7 @@ get_header();
 			<?php if (get_field('square_5')) { ?>
 				<aside class="post">
 					<div class="featured-image">
-						<img src="<?php the_field('square_5_photo'); ?>" alt="" />
+						<img src="<?php the_field('square_5_photo'); ?>" alt="decorative image" />
 					</div>
 					<?php the_field('square_5'); ?>
 				</aside>
@@ -99,7 +99,7 @@ get_header();
 			<?php if (get_field('square_6')) { ?>
 				<aside class="post">
 					<div class="featured-image">
-						<img src="<?php the_field('square_6_photo'); ?>" alt="" />
+						<img src="<?php the_field('square_6_photo'); ?>" alt="decorative image" />
 					</div>
 					<?php the_field('square_6'); ?>
 				</aside>
@@ -107,7 +107,7 @@ get_header();
 			<?php if (get_field('square_7')) { ?>
 				<aside class="post">
 					<div class="featured-image">
-						<img src="<?php the_field('square_7_photo'); ?>" alt="" />
+						<img src="<?php the_field('square_7_photo'); ?>" alt="decorative image" />
 					</div>
 					<?php the_field('square_7'); ?>
 				</aside>
@@ -115,7 +115,7 @@ get_header();
 			<?php if (get_field('square_8')) { ?>
 				<aside class="post">
 					<div class="featured-image">
-						<img src="<?php the_field('square_8_photo'); ?>" alt="" />
+						<img src="<?php the_field('square_8_photo'); ?>" alt="decorative image" />
 					</div>
 					<?php the_field('square_8'); ?>
 				</aside>
@@ -123,7 +123,7 @@ get_header();
 			<?php if (get_field('square_9')) { ?>
 				<aside class="post">
 					<div class="featured-image">
-						<img src="<?php the_field('square_9_photo'); ?>" alt="" />
+						<img src="<?php the_field('square_9_photo'); ?>" alt="decorative image" />
 					</div>
 					<?php the_field('square_9'); ?>
 				</aside>
@@ -131,7 +131,7 @@ get_header();
 			<?php if (get_field('square_10')) { ?>
 				<aside class="post">
 					<div class="featured-image">
-						<img src="<?php the_field('square_10_photo'); ?>" alt="" />
+						<img src="<?php the_field('square_10_photo'); ?>" alt="decorative image" />
 					</div>
 					<?php the_field('square_10'); ?>
 				</aside>
@@ -139,7 +139,7 @@ get_header();
 			<?php if (get_field('square_11')) { ?>
 				<aside class="post">
 					<div class="featured-image">
-						<img src="<?php the_field('square_11_photo'); ?>" alt="" />
+						<img src="<?php the_field('square_11_photo'); ?>" alt="decorative image" />
 					</div>
 					<?php the_field('square_11'); ?>
 				</aside>
@@ -147,7 +147,7 @@ get_header();
 			<?php if (get_field('square_12')) { ?>
 				<aside class="post">
 					<div class="featured-image">
-						<img src="<?php the_field('square_12_photo'); ?>" alt="" />
+						<img src="<?php the_field('square_12_photo'); ?>" alt="decorative image" />
 					</div>
 					<?php the_field('square_12'); ?>
 				</aside>
