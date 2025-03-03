@@ -18,7 +18,7 @@ get_header();
 					<h1><?php the_title(); ?></h1>
 					<div>
 						<?php
-						echo 'Tarifas listadas son las máximas y puden no reflejar la cantídad real a pagar.<span class="right"><a href="https://provo.edu/school-fees-24-25/">School Fees 24-25</a></span></p>';
+						echo 'Tarifas listadas son las máximas y puden no reflejar la cantídad real a pagar.<span class="right"><a href="https://provo.edu/school-fees-25-26/">School Fees 25-26</a></span></p>';
 						the_content();
 						?>
 						<h2>By Category</h2>
