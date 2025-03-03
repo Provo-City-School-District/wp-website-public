@@ -26,7 +26,7 @@ get_header();
 						<tr>
 							<th>Tarifa (no exceder)</th>
 					
-							<th>Tarifa máxima total</th>
+							<!-- <th>Tarifa máxima total</th> -->
 							<th>Notas</th>
 						</tr>
 					</thead>
@@ -34,7 +34,7 @@ get_header();
 						<tr>
 							<td><?php echo $fields['overall_activity_fee_amounts']['overall_activity_fee']; ?></td>
 							
-							<td><?php echo $fields['overall_activity_fee_amounts']['overall_course_total']; ?></td>
+							<!-- <td><?php echo $fields['overall_activity_fee_amounts']['overall_course_total']; ?></td> -->
 							<td><?php echo $fields['overall_activity_fee_amounts']['notes']; ?></td>
 						</tr>
 					</tbody>
@@ -58,7 +58,7 @@ get_header();
 									<th>Descripción de tarifa</th>
 									<th>Tarifa</th>
 								
-									<th>Total</th>
+									<!-- <th>Total</th> -->
 									<th>Notas</th>
 									<th>Tarifa aprobada del año anterior</th>
 								</tr>
@@ -72,7 +72,7 @@ get_header();
 										<td><?php echo $fee['fee_description']; ?></td>
 										<td><?php echo $fee['fee']; ?></td>
 									
-										<td><?php echo $fee['total']; ?></td>
+										<!-- <td><?php echo $fee['total']; ?></td> -->
 										<td><?php echo $fee['notes']; ?></td>
 										<td><?php echo $fee['prior_year_approved_fee']; ?></td>
 									</tr>
