@@ -56,7 +56,7 @@ get_header();
 									<tr>
 										<th>Descripción de tarifa</th>
 										<th>Tarifa</th>
-										<th>Fondo de recaudación</th>
+										<!-- <th>Fondo de recaudación</th> -->
 										<th>Total</th>
 										<th>Notas</th>
 									</tr>
@@ -68,7 +68,7 @@ get_header();
 										<tr>
 											<th><?php echo $fee['fee_description']; ?></th>
 											<td class="textright"><?php echo $fee['fee']; ?></td>
-											<td class="textright"><?php echo $fee['fundraising']; ?></td>
+											<!-- <td class="textright"><?php echo $fee['fundraising']; ?></td> -->
 											<td class="textright"><?php echo $fee['total']; ?></td>
 											<td><?php echo $fee['notes']; ?></td>
 										</tr>
@@ -101,7 +101,7 @@ get_header();
 									<tr>
 										<th>Descripción de tarifa</th>
 										<th>Tarifa</th>
-										<th>Fondo de recaudación</th>
+										<!-- <th>Fondo de recaudación</th> -->
 										<th>Total</th>
 										<th>Notas</th>
 									</tr>
@@ -113,7 +113,7 @@ get_header();
 										<tr>
 											<th><?php echo $fee['fee_description']; ?></th>
 											<td class="textright"><?php echo $fee['fee']; ?></td>
-											<td class="textright"><?php echo $fee['fundraising']; ?></td>
+											<!-- <td class="textright"><?php echo $fee['fundraising']; ?></td> -->
 											<td class="textright"><?php echo $fee['total']; ?></td>
 											<td><?php echo $fee['notes']; ?></td>
 										</tr>
@@ -182,7 +182,7 @@ I changed the code so that the search would happen before the if statement and t
 									<tr>
 										<th>Descripción de tarifa</th>
 										<th>Tarifa</th>
-										<th>Fondo de recaudación</th>
+										<!-- <th>Fondo de recaudación</th> -->
 										<th>Total</th>
 										<th>Notas</th>
 									</tr>
@@ -214,7 +214,7 @@ I changed the code so that the search would happen before the if statement and t
 												}
 												?>
 											</td>
-											<td class="textright">
+											<!-- <td class="textright">
 												<?php
 												if ($fee['bold_line'] !== false) {
 													echo '<strong>';
@@ -224,7 +224,7 @@ I changed the code so that the search would happen before the if statement and t
 													echo '</strong>';
 												}
 												?>
-											</td>
+											</td> -->
 											<td class="textright">
 												<?php
 												if ($fee['bold_line'] !== false) {

@@ -5,7 +5,7 @@ get_header();
 	<ol class="breadcrumbs" id="breadcrumbs">
 		<li><a href="https://provo.edu/">Home</a> / </li>
 		<li><a href="https://provo.edu/pagos-escolares/">Pagos Escolares</a> / </li>
-		<li><a href="https://provo.edu/pagos-escolares-24-25/">Pagos Escolares 24-25</a> / </li>
+		<li><a href="https://provo.edu/pagos-escolares-25-26/">Pagos Escolares 24-25</a> / </li>
 		<li><?php single_post_title(); ?></li>
 	</ol>
 	<section id="currentPage">
@@ -25,7 +25,7 @@ get_header();
 					<thead>
 						<tr>
 							<th>Tarifa (no exceder)</th>
-							<th>Recaudación de fondos (no exceder)</th>
+					
 							<th>Tarifa máxima total</th>
 							<th>Notas</th>
 						</tr>
@@ -33,7 +33,7 @@ get_header();
 					<tbody>
 						<tr>
 							<td><?php echo $fields['overall_activity_fee_amounts']['overall_activity_fee']; ?></td>
-							<td><?php echo $fields['overall_activity_fee_amounts']['overall_course_fundraising']; ?></td>
+							
 							<td><?php echo $fields['overall_activity_fee_amounts']['overall_course_total']; ?></td>
 							<td><?php echo $fields['overall_activity_fee_amounts']['notes']; ?></td>
 						</tr>
@@ -57,7 +57,7 @@ get_header();
 								<tr>
 									<th>Descripción de tarifa</th>
 									<th>Tarifa</th>
-									<th>Recaudación de fondos</th>
+								
 									<th>Total</th>
 									<th>Notas</th>
 									<th>Tarifa aprobada del año anterior</th>
@@ -71,7 +71,7 @@ get_header();
 									<tr>
 										<td><?php echo $fee['fee_description']; ?></td>
 										<td><?php echo $fee['fee']; ?></td>
-										<td><?php echo $fee['fundraising']; ?></td>
+									
 										<td><?php echo $fee['total']; ?></td>
 										<td><?php echo $fee['notes']; ?></td>
 										<td><?php echo $fee['prior_year_approved_fee']; ?></td>
