@@ -12,6 +12,7 @@ RUN a2dissite default-ssl.conf
 # enable remoteip
 RUN a2enmod remoteip
 RUN a2enconf remoteip
+RUN a2enconf remoteip-log
 
 # enable remote ip address
 RUN echo 'LogFormat "%{X-Forwarded-For}i %l %u %t \"%r\" %>s %b" forwarded' >> /etc/apache2/conf-available/remoteip-log.conf
