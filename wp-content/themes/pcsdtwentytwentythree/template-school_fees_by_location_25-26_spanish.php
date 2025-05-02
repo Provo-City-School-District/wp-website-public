@@ -42,10 +42,12 @@ get_header();
 			//Check if location is a middle school
 			if (in_array($location_of_fees_to_display['value'], $middle_locations)) {
 				//if middle school output general fees middle schools post which is currently postID 18742
-				$middle_gen_fees = get_fields(59769);
+				$middle_gen_fees = get_fields(82281);
+				if($middle_gen_fees['location_specific_fees']){
 			?>
 				<h2>Tarifa general requerida - Escuelas media</h2>
 				<?php
+				}
 				foreach ($middle_gen_fees['location_specific_fees'] as $breakdown) {
 					//check if the location is specificied location
 					if ($breakdown['location'] == $location_of_fees_to_display['label']) {
@@ -86,11 +88,13 @@ get_header();
 			//check if location is a highschool
 			if (in_array($location_of_fees_to_display['value'], $high_locations)) {
 				//if High School output general fees High School post which is currently postID 19380
-				$high_gen_fees = get_fields(59943);
+				$high_gen_fees = get_fields(82107);
 				//print_r($high_gen_fees);
+				if($high_gen_fees['location_specific_fees']){
 				?>
 				<h2>Tarifa general requerida - Escuelas secondarias</h2>
 				<?php
+				}
 				foreach ($high_gen_fees['location_specific_fees'] as $breakdown) {
 					//check if the location is specificied location
 					if ($breakdown['location'] == $location_of_fees_to_display['label']) {
@@ -130,7 +134,7 @@ get_header();
 			//create array to be used
 			$post_ids_array = array();
 			//query for arrays that include a specific location in the post
-			$get_id_sql =  "SELECT post_id,meta_key,meta_value FROM psd_posts,psd_postmeta WHERE post_type = 'pagos_escolares_2425' AND psd_posts.ID = psd_postmeta.post_id AND meta_value = '" . $location_of_fees_to_display['value'] . "' ORDER BY post_title";
+			$get_id_sql =  "SELECT post_id,meta_key,meta_value FROM psd_posts,psd_postmeta WHERE post_type = 'pagos_escolares_2526' AND psd_posts.ID = psd_postmeta.post_id AND meta_value = '" . $location_of_fees_to_display['value'] . "' ORDER BY post_title";
 			$query_post_ids = $wpdb->get_results($get_id_sql);
 			//create an array of just the ID of each activity that includes the specified location
 			//print_r($query_post_ids);

@@ -353,9 +353,16 @@ Skip nav link
 
 /* Archive Nav  */
 .archiveNav {
-    grid-column: 1 / span 3;
-    justify-self: end;
+    /* grid-column: 1 / span 3;
+    justify-self: end; */
     margin: 10px 0;
+}
+
+@media (min-width: 700px) {
+    .archiveNav {
+        grid-column: 1 / span 3;
+        justify-self: end;
+    }
 }
 
 .archiveNav .page-numbers:first-child {

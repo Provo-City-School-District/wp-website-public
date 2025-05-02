@@ -81,6 +81,10 @@ $district7 = '(District 7: Gina Hales)';
 					<label>
 						<input type="radio" name="role" value="Vendor" id="vendorRadio"> Vendor
 					</label>
+					<br>
+					<label>
+						<input type="radio" name="role" value="Student" id="studentRadio"> Student
+					</label>
 					<div id="studentNameField" style="display: none;">
 						<label for="studentName">Student Full Name:</label>
 						<input type="text" id="studentName" name="studentName">

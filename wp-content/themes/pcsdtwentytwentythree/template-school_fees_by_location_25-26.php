@@ -42,10 +42,12 @@ get_header();
 			//Check if location is a middle school
 			if (in_array($location_of_fees_to_display['value'], $middle_locations)) {
 				//if middle school output general fees middle schools post which is currently postID 18742
-				$middle_gen_fees = get_fields(60270);
+				$middle_gen_fees = get_fields(81827);
+				if($middle_gen_fees['location_specific_fees']){
 			?>
 				<h2>General Required Fee - Middle Schools</h2>
 				<?php
+				}
 				foreach ($middle_gen_fees['location_specific_fees'] as $breakdown) {
 					//check if the location is specificied location
 					if ($breakdown['location'] == $location_of_fees_to_display['label']) {
@@ -86,11 +88,13 @@ get_header();
 			//check if location is a highschool
 			if (in_array($location_of_fees_to_display['value'], $high_locations)) {
 				//if High School output general fees High School post which is currently postID 19380
-				$high_gen_fees = get_fields(60443);
+				$high_gen_fees = get_fields(81999);
 				//print_r($high_gen_fees);
+				if($high_gen_fees['location_specific_fees']){
 				?>
 				<h2>General Required Fee - High Schools</h2>
 				<?php
+				}
 				foreach ($high_gen_fees['location_specific_fees'] as $breakdown) {
 					//check if the location is specificied location
 					if ($breakdown['location'] == $location_of_fees_to_display['label']) {

@@ -68,9 +68,13 @@ Home Page posts
 	color: var(--theme-white);
 }
 
-.posts a {
+.posts article a {
 	text-decoration: none;
 }
+
+//.stories a {
+   //text-decoration-line: none;
+//}
 
 .stories {
 	display: grid;

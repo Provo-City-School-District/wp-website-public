@@ -5,7 +5,7 @@ get_header();
 	<ol class="breadcrumbs" id="breadcrumbs">
 		<li><a href="https://provo.edu/">Home</a> / </li>
 		<li><a href="https://provo.edu/pagos-escolares/">Pagos Escolares</a> / </li>
-		<li><a href="https://provo.edu/pagos-escolares-25-26/">Pagos Escolares 24-25</a> / </li>
+		<li><a href="https://provo.edu/pagos-escolares-25-26/">Pagos Escolares 25-26</a> / </li>
 		<li><?php single_post_title(); ?></li>
 	</ol>
 	<section id="currentPage">

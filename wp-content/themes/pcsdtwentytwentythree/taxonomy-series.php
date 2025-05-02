@@ -1,6 +1,7 @@
 <?php
 get_header();
 ?>
+
 <main id="mainContent" class="sidebar">
 
 	<ol class="breadcrumbs" id="breadcrumbs">
@@ -13,10 +14,21 @@ get_header();
 			<h1>Podcasts: <?php single_cat_title(); ?></h1>
 			<img src="https://provo.edu/wp-content/uploads/2023/08/podcast-banner-4.jpeg" alt="Sup With the Sup" />
 			<?php
-			if (have_posts()) :
+			//if (have_posts()) :
+			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+			$args = array(
+				'post_type' => 'podcast',
+				'posts_per_page' => 18, // Set to 18 to match WP setting -> https://provo.edu/wp-admin/options-reading.php
+				'paged' => $paged,
+				//'category_name' => 'category-name', // Fetch posts from the 'category-name' category.
+			);
+			
+			$query = new WP_Query($args);
+			
+			if ($query->have_posts()) : 
 			?>
 				<div class="series-archive">
-					<?php while (have_posts()) : the_post(); ?>
+					<?php while ($query->have_posts()) : $query->the_post(); ?>
 						<div class="episode">
 							<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							<?php if (function_exists('ssp_player')) : ?>
@@ -27,14 +39,19 @@ get_header();
 									?>
 								</div>
 							<?php endif; ?>
-
 						</div>
 					<?php endwhile; ?>
+					<nav class="archiveNav">
+						<?php echo paginate_links(array('total' => $query->max_num_pages)); ?>
+					</nav>
 				</div>
 			<?php
 			else :
 				echo 'No episodes found.';
 			endif;
+			
+			// Reset post data after custom query
+			wp_reset_postdata();
 			?>
 		</article>
 	</div>

@@ -863,3 +863,12 @@ function special_nav_class($classes, $item)
 	}
 	return $classes;
 }
+
+
+
+// Disable pingback.ping via XML-RPC
+add_filter( 'xmlrpc_methods', function( $methods ) {
+    unset( $methods['pingback.ping'] );
+    unset( $methods['pingback.extensions.getPingbacks'] );
+    return $methods;
+} );
